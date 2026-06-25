@@ -1,0 +1,12 @@
+﻿server.log
+server.err.log
+_*.png
+_*.jpg
+_*.jpeg
+_*.webp
+_word_render/
+reference/
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
