@@ -1,19 +1,38 @@
-(function(){
-  const storageKey = 'portfolio-theme';
+﻿(function(){
+  const storageKey = 'portfolio-theme-v2';
   const viewKey = 'portfolio-view';
+  const defaultView = 'projects';
   const body = document.body;
-  const button = document.querySelector('.theme-btn');
+  const root = document.documentElement;
+  const themeButtons = Array.from(document.querySelectorAll('.theme-btn'));
   const navLinks = Array.from(document.querySelectorAll('nav a[data-view]'));
   const views = Array.from(document.querySelectorAll('.view-page'));
+  const siteNav = document.getElementById('site-nav');
+  const menuToggle = document.querySelector('.mobile-menu-toggle');
+
+  function setMobileMenu(open){
+    body.classList.toggle('mobile-menu-open', open);
+    if(menuToggle){ menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false'); }
+  }
+
+  function closeMobileMenu(){
+    setMobileMenu(false);
+  }
 
   function applyTheme(theme){
-    body.setAttribute('data-theme', theme);
-    if(button){ button.textContent = theme === 'dark' ?'DARK' : 'LIGHT'; }
-    try { localStorage.setItem(storageKey, theme); } catch(e) {}
+    const safeTheme = theme === 'dark' ? 'dark' : 'light';
+    body.setAttribute('data-theme', safeTheme);
+    root.setAttribute('data-theme', safeTheme);
+    themeButtons.forEach(function(button){
+      button.textContent = safeTheme === 'dark' ? 'DARK' : 'LIGHT';
+      button.classList.toggle('is-dark', safeTheme === 'dark');
+      button.classList.toggle('is-light', safeTheme === 'light');
+    });
+    try { localStorage.setItem(storageKey, safeTheme); } catch(e) {}
   }
 
   function applyView(view){
-    const safeView = views.some(v => v.dataset.page === view) ?view : 'about';
+    const safeView = views.some(v => v.dataset.page === view) ? view : defaultView;
     views.forEach(v => {
       if(v.dataset.page === safeView){ v.removeAttribute('hidden'); }
       else { v.setAttribute('hidden', ''); }
@@ -23,19 +42,34 @@
       else link.classList.remove('active');
     });
     try { localStorage.setItem(viewKey, safeView); } catch(e) {}
+    closeMobileMenu();
     window.scrollTo(0,0);
     document.dispatchEvent(new CustomEvent('portfolio:viewchange', { detail: { view: safeView } }));
   }
 
-  applyTheme('dark');
-  applyView('about');
+  const savedTheme = (() => {
+    try { return localStorage.getItem(storageKey); } catch(e) { return null; }
+  })();
+  const hashViewMap = {
+    'accueil': 'about',
+    'a-propos': 'about',
+    'experience': 'experience',
+    'formation': 'experience',
+    'projets': 'projects',
+    'portfolio': 'projects',
+    'contact': 'contact'
+  };
+  const initialHash = (window.location.hash || '').replace(/^#/, '');
 
-  if(button){
+  applyTheme(savedTheme === 'dark' ? 'dark' : 'light');
+  applyView(hashViewMap[initialHash] || defaultView);
+
+  themeButtons.forEach(function(button){
     button.addEventListener('click', function(){
-      const current = body.getAttribute('data-theme') === 'dark' ?'dark' : 'light';
-      applyTheme(current === 'dark' ?'light' : 'dark');
+      const current = body.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+      applyTheme(current === 'dark' ? 'light' : 'dark');
     });
-  }
+  });
 
   navLinks.forEach(link => {
     link.addEventListener('click', function(e){
@@ -50,6 +84,23 @@
       const targetView = link.getAttribute('data-view-target');
       if(targetView){ applyView(targetView); }
     });
+  });
+
+  if(menuToggle){
+    menuToggle.addEventListener('click', function(){
+      setMobileMenu(!body.classList.contains('mobile-menu-open'));
+    });
+  }
+
+  document.addEventListener('click', function(e){
+    if(!body.classList.contains('mobile-menu-open')) return;
+    if(siteNav && siteNav.contains(e.target)) return;
+    if(menuToggle && menuToggle.contains(e.target)) return;
+    closeMobileMenu();
+  });
+
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') closeMobileMenu();
   });
 })();
 
@@ -481,3 +532,20 @@
     });
   });
 })();
+
+
+(function(){
+  const form = document.querySelector('[data-contact-form]');
+  if(!form) return;
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = (document.getElementById('contact-name') || {}).value || '';
+    const email = (document.getElementById('contact-email') || {}).value || '';
+    const message = (document.getElementById('contact-message') || {}).value || '';
+    const subject = encodeURIComponent('Message depuis le portfolio - ' + (name.trim() || 'Contact'));
+    const body = encodeURIComponent('Nom : ' + name.trim() + '\nEmail : ' + email.trim() + '\n\nMessage :\n' + message.trim());
+    window.location.href = 'mailto:mandrindra23@yahoo.fr?subject=' + subject + '&body=' + body;
+  });
+})();
+
+

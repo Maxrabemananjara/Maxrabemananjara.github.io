@@ -1,17 +1,17 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html lang="fr">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Mandrindra Rabemananjara</title>
-<link rel="stylesheet" href="assets/css/style.css?v=v23-card-button-align">
+<link rel="stylesheet" href="assets/css/style.css?v=v49-mobile-clean">
 </head>
-<body data-theme="dark">
+<body data-theme="light">
 <div aria-hidden="true" class="bg-video-root"><video autoplay="" class="bg-video" loop="" muted="" playsinline=""><source src="assets/videos/original/video-01-background.mp4" type="video/mp4"/></video></div>
 <header>
 <div class="header-inner">
-<a class="brand scroll-reveal from-left" data-view-target="home" href="#accueil">
+<a class="brand scroll-reveal from-left" data-view-target="about" href="#accueil">
 <div class="badge">MR</div>
 <div>
 <div class="brand-name-1">MANDRINDRA</div>
@@ -21,12 +21,14 @@
 <a aria-label="Emblème Mandrindra Rabemananjara" class="header-signature scroll-reveal" href="#accueil">
 <img alt="Emblème Mandrindra Rabemananjara" src="assets/images/original/img-01-logo-embleme.png"/>
 </a>
-<nav>
-<a class="active" data-view="about" href="#">A propos</a>
+<nav class="site-nav" id="site-nav" aria-label="Navigation principale">
+<a data-view="about" href="#">Présentation</a>
+<a class="active" data-view="projects" href="#">Portfolio</a>
 <a data-view="experience" href="#">Parcours</a>
-<a data-view="formation" href="#">Formation</a>
-<a data-view="projects" href="#">Portfolio</a>
-<button class="theme-btn">LIGHT</button></nav>
+<a data-view="contact" href="#">Contact</a>
+<button class="theme-btn" type="button">LIGHT</button>
+</nav>
+<button class="mobile-menu-toggle" type="button" aria-label="Ouvrir le menu" aria-controls="site-nav" aria-expanded="false"><span></span><span></span><span></span></button>
 </div>
 </header><div class="view-page" data-page="about"><section class="hero" id="accueil">
 <div class="about-intro about-intro-fading no-scroll-reveal" id="about-intro">
@@ -262,9 +264,86 @@
 <p class="accomplishment-copy">Déploiement des forecasts trimestriels et structuration d’un pilotage financier synthétique à destination du Conseil d’administration. Cette démarche a permis d’apporter une vision claire, partagée et orientée décision des objectifs financiers et stratégiques du groupe.</p>
 </article>
 </div>
+<div class="experience-formation-section" id="formation">
+<div class="section-title formation-integrated-title">Formation</div>
+<div class="timeline-shell formation-timeline-shell">
+<div class="timeline-head">
+<div class="timeline-label">Timeline</div>
+</div>
+<div class="timeline formation-timeline" style="font-weight:700;">
+<article class="timeline-item">
+<div class="timeline-left">
+<div class="timeline-company">Wild Code School</div>
+<div class="timeline-role">Formation Data Engineer / Data Analyst</div>
+<div class="timeline-meta">2025 – 2026</div>
+</div>
+<div class="timeline-right">
+<div class="timeline-project">Formation intensive orientée data, automatisation et analyse, avec une montée en compétence sur Python, SQL, Power BI, ETL, Docker et les outils de visualisation.</div>
+<div class="timeline-tags">
+<span class="timeline-tag">Python</span>
+<span class="timeline-tag">SQL</span>
+<span class="timeline-tag">Power BI</span>
+<span class="timeline-tag">ETL</span>
+<span class="timeline-tag">Docker</span>
+<span class="timeline-tag">Machine Learning</span>
+</div>
+<div class="timeline-highlight"><strong>Approche :</strong> formation orientée projet, data engineering, analyse et outils décisionnels.</div>
+</div>
+</article>
+<article class="timeline-item">
+<div class="timeline-left">
+<div class="timeline-company">INSEEC U — Lyon, France</div>
+<div class="timeline-role">Master 2 Audit et Contrôle de Gestion</div>
+<div class="timeline-meta">2017 – 2018</div>
+</div>
+<div class="timeline-right">
+<div class="timeline-project">Formation centrée sur le pilotage de la performance, l’analyse financière, l’audit, la finance d’entreprise et le référentiel IFRS.</div>
+<div class="timeline-tags">
+<span class="timeline-tag">Audit</span>
+<span class="timeline-tag">Contrôle de gestion</span>
+<span class="timeline-tag">Performance</span>
+<span class="timeline-tag">Finance d’entreprise</span>
+</div>
+<div class="timeline-highlight"><strong>Apport :</strong> renforcement d’une expertise en audit, performance financière et référentiel IFRS.</div>
+</div>
+</article>
+<article class="timeline-item">
+<div class="timeline-left">
+<div class="timeline-company">New Jersey City University — New Jersey, États-Unis</div>
+<div class="timeline-role">Bachelor of Science en Finance</div>
+<div class="timeline-meta">2012 – 2016</div>
+</div>
+<div class="timeline-right">
+<div class="timeline-project">Formation axée sur la gestion financière, la planification, les risques, les marchés internationaux et le référentiel US GAAP.</div>
+<div class="timeline-tags">
+<span class="timeline-tag">Finance</span>
+<span class="timeline-tag">Risk management</span>
+<span class="timeline-tag">US GAAP</span>
+<span class="timeline-tag">Marchés internationaux</span>
+</div>
+<div class="timeline-highlight"><strong>Apport :</strong> consolidation d’une base solide en finance internationale et référentiel US GAAP.</div>
+</div>
+</article>
+</div>
+</div>
+<div class="cards formation-cards">
+<article class="card">
+<div class="card-media"><img alt="NJCU" src="assets/images/original/img-50-njcu.jpg"/></div>
+<div class="card-body"><div class="card-title">New Jersey City University</div><div class="card-subtitle">Bachelor of Science – Finance · 2016</div><div class="card-text">New Jersey City University (NJCU) est une université publique située à Jersey City, à proximité immédiate de New York. Fondée en 1927, elle propose un large éventail de formations en business, sciences, éducation et études professionnelles, avec une forte orientation vers l’apprentissage appliqué et l’insertion professionnelle. Implantée dans l’une des villes les plus diversifiées des États-Unis, elle offre un environnement international et dynamique, favorisant l’ouverture, l’adaptabilité et la compréhension de contextes économiques variés.</div><a class="formation-link" href="https://www.njcu.edu/home" target="_blank" rel="noopener noreferrer">En savoir plus</a></div>
+</article>
+<article class="card">
+<div class="card-media"><img alt="INSEEC" src="assets/images/original/img-51-inseec.jpg"/></div>
+<div class="card-body"><div class="card-title">INSEEC U</div><div class="card-subtitle">Master en Finance – Audit &amp; contrôle de gestion · 2018</div><div class="card-text">INSEEC est une école de commerce française reconnue, spécialisée en management, finance et marketing, avec une forte orientation vers l’employabilité et les environnements internationaux. Présente dans plusieurs grandes villes, elle propose des formations professionnalisantes, en lien étroit avec les entreprises, favorisant une approche concrète des enjeux de gestion, de performance et de prise de décision. Son positionnement allie rigueur académique et ouverture aux réalités opérationnelles.</div><a class="formation-link" href="https://www.inseec.com/lyon/" target="_blank" rel="noopener noreferrer">En savoir plus</a></div>
+</article>
+<article class="card">
+<div class="card-media"><img alt="Wild Code School" src="assets/images/original/img-52-wild-code-school.jpg"/></div>
+<div class="card-body"><div class="card-title">Wild Code School</div><div class="card-subtitle">Titre RNCP – Data Analyst · 2026</div><div class="card-text">Wild Code School est une école spécialisée dans les métiers de la tech et de la data, reconnue pour ses formations intensives, certifiantes et fortement orientées vers la pratique. Présente sur plusieurs campus en France et à distance, elle développe une pédagogie fondée sur des projets concrets, l’accompagnement personnalisé et l’adaptation continue aux besoins du marché. Son positionnement met l’accent sur la montée en compétences rapide, l’employabilité et la maîtrise d’outils directement mobilisables en entreprise.</div><a class="formation-link" href="https://www.wildcodeschool.com/" target="_blank" rel="noopener noreferrer">En savoir plus</a></div>
+</article>
+</div>
+</div>
+
 </div>
 </section></div><div class="view-page" data-page="projects" hidden=""><section class="block" id="projets"><div class="section-inner"><div class="shell"><div class="project-list-view" id="portfolio-list"><div class="section-kicker">Portfolio</div>
-<div class="section-title">Projets</div>
 <div class="cards project-cards">
 <article class="card project-card">
 <div class="card-media"><img alt="Dashboard automatisé des trains supprimés" src="assets/images/original/img-trains-supprimes-01.png"/></div>
@@ -273,9 +352,9 @@
 <div class="card-subtitle">Data engineering · Microsoft Fabric · GitHub Actions · GitHub Pages</div>
 <div class="card-text">Conception d’une chaîne data complète autour des trains SNCF supprimés publiés sur data.gouv.fr : ingestion, contrôle qualité, modélisation Bronze / Silver / Gold et publication automatique d’un dashboard métier mis à jour quotidiennement.</div>
 <div class="project-card-actions">
-<a class="project-button project-open-link" data-project-target="projet-trains-supprimes-detail" href="#projet-trains-supprimes-detail">Lire le projet</a>
-<a class="project-button project-button-secondary" href="https://maxrabemananjara.github.io/train-supprimes-fabric/" rel="noopener" target="_blank">Voir le dashboard</a>
-<a class="project-button project-button-secondary" href="https://github.com/Maxrabemananjara/train-supprimes-fabric" rel="noopener" target="_blank">Voir le GitHub</a>
+<a class="project-button project-open-link" data-project-target="projet-trains-supprimes-detail" href="#projet-trains-supprimes-detail"><span>En savoir plus</span></a>
+<a class="project-button project-button-secondary" href="https://maxrabemananjara.github.io/train-supprimes-fabric/" rel="noopener" target="_blank"><span class="project-action-icon"><img alt="" aria-hidden="true" src="assets/images/original/icon-web.svg"/></span><span>Site web</span></a>
+<a class="project-button project-button-secondary" href="https://github.com/Maxrabemananjara/train-supprimes-fabric" rel="noopener" target="_blank"><span class="project-action-icon"><img alt="" aria-hidden="true" src="assets/images/original/img-18-github.svg"/></span><span>GitHub</span></a>
 </div>
 </div>
 </article>
@@ -286,9 +365,9 @@
 <div class="card-subtitle">Data Analysis · Power BI · Dataviz · Python · Open Data</div>
 <div class="card-text">Analyse des mobilités du Rhône et de la Métropole de Lyon à partir de données ouvertes : préparation Python, structuration d’un modèle analytique et restitution dans un rapport Power BI lisible, orienté territoire, temporalités et concentration géographique.</div>
 <div class="project-card-actions">
-<a class="project-button project-open-link" data-project-target="projet-analyse-mobilite-rhone-detail" href="#projet-analyse-mobilite-rhone-detail">Lire le projet</a>
-<a class="project-button project-button-secondary" href="https://app.powerbi.com/view?r=eyJrIjoiMTM4YzQ4MDktNTk2YS00MTVjLTkwMjMtODUyYmY0Y2I4ZWQ4IiwidCI6IjAzNjM1ZDc3LWRmNmUtNGNkOC1iM2ZjLTJlY2Y4MzQzNGUyZSJ9&pageName=33ff871e40c6827057d7" rel="noopener" target="_blank">Voir le dashboard</a>
-<a class="project-button project-button-secondary" href="https://github.com/Maxrabemananjara/analyse-mobilite-rhone" rel="noopener" target="_blank">Voir le GitHub</a>
+<a class="project-button project-open-link" data-project-target="projet-analyse-mobilite-rhone-detail" href="#projet-analyse-mobilite-rhone-detail"><span>En savoir plus</span></a>
+<a class="project-button project-button-secondary" href="https://app.powerbi.com/view?r=eyJrIjoiMTM4YzQ4MDktNTk2YS00MTVjLTkwMjMtODUyYmY0Y2I4ZWQ4IiwidCI6IjAzNjM1ZDc3LWRmNmUtNGNkOC1iM2ZjLTJlY2Y4MzQzNGUyZSJ9&pageName=33ff871e40c6827057d7" rel="noopener" target="_blank"><span class="project-action-icon"><img alt="" aria-hidden="true" src="assets/images/original/img-11-power-bi.svg"/></span><span>Power BI</span></a>
+<a class="project-button project-button-secondary" href="https://github.com/Maxrabemananjara/analyse-mobilite-rhone" rel="noopener" target="_blank"><span class="project-action-icon"><img alt="" aria-hidden="true" src="assets/images/original/img-18-github.svg"/></span><span>GitHub</span></a>
 </div>
 </div>
 </article>
@@ -453,90 +532,22 @@
 </article>
 </div>
 </div></div></section></div>
-<div class="view-page" data-page="formation" hidden=""><section class="block" id="formation">
+<div class="view-page" data-page="contact" hidden=""><section class="block contact-page" id="contact">
 <div class="section-inner">
-<div class="section-kicker">Formation</div>
-<div class="section-title">Formation et montée en compétence</div>
-<div class="section-desc"><p>Mon parcours de formation s’est construit à la croisée de la <strong>finance et de la data</strong>. J’ai d’abord étudié aux États Unis, à <strong>New Jersey City University</strong>, avec une spécialisation en finance, où j’ai acquis de solides bases en analyse financière et une lecture structurée des enjeux économiques.
-
-J’ai ensuite poursuivi en France avec un <strong>Master en finance et contrôle de gestion</strong>, afin d’approfondir ma compréhension du pilotage de la performance, des équilibres de gestion et des réalités opérationnelles de l’entreprise.</p><p>Au fil de mes expériences, j’ai développé une véritable affinité pour la data, pour sa capacité à clarifier des sujets complexes, fiabiliser l’information et renforcer la décision. C’est dans cette continuité que j’ai choisi de compléter mon parcours par un <strong>bootcamp spécialisé</strong>, pour consolider mes compétences en traitement de données, en <strong>automatisation</strong> et en outils d’analyse.</p></div>
-<div class="timeline-shell formation-timeline-shell">
-<div class="timeline-head">
-<div class="timeline-label">Timeline</div>
-</div>
-<div class="timeline formation-timeline" style="font-weight:700;">
-<article class="timeline-item">
-<div class="timeline-left">
-<div class="timeline-company">Wild Code School</div>
-<div class="timeline-role">Formation Data Engineer / Data Analyst</div>
-<div class="timeline-meta">2025 – 2026</div>
-</div>
-<div class="timeline-right">
-<div class="timeline-project">Formation intensive orientée data, automatisation et analyse, avec une montée en compétence sur Python, SQL, Power BI, ETL, Docker et les outils de visualisation.</div>
-<div class="timeline-tags">
-<span class="timeline-tag">Python</span>
-<span class="timeline-tag">SQL</span>
-<span class="timeline-tag">Power BI</span>
-<span class="timeline-tag">ETL</span>
-<span class="timeline-tag">Docker</span>
-<span class="timeline-tag">Machine Learning</span>
-</div>
-<div class="timeline-highlight"><strong>Approche :</strong> formation orientée projet, data engineering, analyse et outils décisionnels.</div>
-</div>
-</article>
-<article class="timeline-item">
-<div class="timeline-left">
-<div class="timeline-company">INSEEC U — Lyon, France</div>
-<div class="timeline-role">Master 2 Audit et Contrôle de Gestion</div>
-<div class="timeline-meta">2017 – 2018</div>
-</div>
-<div class="timeline-right">
-<div class="timeline-project">Formation centrée sur le pilotage de la performance, l’analyse financière, l’audit, la finance d’entreprise et le référentiel IFRS.</div>
-<div class="timeline-tags">
-<span class="timeline-tag">Audit</span>
-<span class="timeline-tag">Contrôle de gestion</span>
-<span class="timeline-tag">Performance</span>
-<span class="timeline-tag">Finance d’entreprise</span>
-</div>
-<div class="timeline-highlight"><strong>Apport :</strong> renforcement d’une expertise en audit, performance financière et référentiel IFRS.</div>
-</div>
-</article>
-<article class="timeline-item">
-<div class="timeline-left">
-<div class="timeline-company">New Jersey City University — New Jersey, États-Unis</div>
-<div class="timeline-role">Bachelor of Science en Finance</div>
-<div class="timeline-meta">2012 – 2016</div>
-</div>
-<div class="timeline-right">
-<div class="timeline-project">Formation axée sur la gestion financière, la planification, les risques, les marchés internationaux et le référentiel US GAAP.</div>
-<div class="timeline-tags">
-<span class="timeline-tag">Finance</span>
-<span class="timeline-tag">Risk management</span>
-<span class="timeline-tag">US GAAP</span>
-<span class="timeline-tag">Marchés internationaux</span>
-</div>
-<div class="timeline-highlight"><strong>Apport :</strong> consolidation d’une base solide en finance internationale et référentiel US GAAP.</div>
-</div>
-</article>
-</div>
-</div>
-<div class="cards formation-cards" hidden>
-<article class="card">
-<div class="card-media"><img alt="NJCU" src="assets/images/original/img-50-njcu.jpg"/></div>
-<div class="card-body"><div class="card-title">New Jersey City University</div><div class="card-subtitle">Bachelor of Science – Finance · 2016</div><div class="card-text">New Jersey City University (NJCU) est une université publique située à Jersey City, à proximité immédiate de New York. Fondée en 1927, elle propose un large éventail de formations en business, sciences, éducation et études professionnelles, avec une forte orientation vers l’apprentissage appliqué et l’insertion professionnelle. Implantée dans l’une des villes les plus diversifiées des États-Unis, elle offre un environnement international et dynamique, favorisant l’ouverture, l’adaptabilité et la compréhension de contextes économiques variés.</div><a class="formation-link" href="https://www.njcu.edu/home" target="_blank" rel="noopener noreferrer">En savoir plus</a></div>
-</article>
-<article class="card">
-<div class="card-media"><img alt="INSEEC" src="assets/images/original/img-51-inseec.jpg"/></div>
-<div class="card-body"><div class="card-title">INSEEC U</div><div class="card-subtitle">Master en Finance – Audit &amp; contrôle de gestion · 2018</div><div class="card-text">INSEEC est une école de commerce française reconnue, spécialisée en management, finance et marketing, avec une forte orientation vers l’employabilité et les environnements internationaux. Présente dans plusieurs grandes villes, elle propose des formations professionnalisantes, en lien étroit avec les entreprises, favorisant une approche concrète des enjeux de gestion, de performance et de prise de décision. Son positionnement allie rigueur académique et ouverture aux réalités opérationnelles.</div><a class="formation-link" href="https://www.inseec.com/lyon/" target="_blank" rel="noopener noreferrer">En savoir plus</a></div>
-</article>
-<article class="card">
-<div class="card-media"><img alt="Wild Code School" src="assets/images/original/img-52-wild-code-school.jpg"/></div>
-<div class="card-body"><div class="card-title">Wild Code School</div><div class="card-subtitle">Titre RNCP – Data Analyst · 2026</div><div class="card-text">Wild Code School est une école spécialisée dans les métiers de la tech et de la data, reconnue pour ses formations intensives, certifiantes et fortement orientées vers la pratique. Présente sur plusieurs campus en France et à distance, elle développe une pédagogie fondée sur des projets concrets, l’accompagnement personnalisé et l’adaptation continue aux besoins du marché. Son positionnement met l’accent sur la montée en compétences rapide, l’employabilité et la maîtrise d’outils directement mobilisables en entreprise.</div><a class="formation-link" href="https://www.wildcodeschool.com/" target="_blank" rel="noopener noreferrer">En savoir plus</a></div>
-</article>
+<div class="contact-shell contact-shell-form-only">
+<h1 class="contact-form-heading">Contactez-moi</h1>
+<form class="contact-form" data-contact-form aria-label="Formulaire de contact">
+<label for="contact-name">Nom</label>
+<input id="contact-name" name="name" autocomplete="name" type="text" required>
+<label for="contact-email">Email</label>
+<input id="contact-email" name="email" autocomplete="email" type="email" required>
+<label for="contact-message">Votre message</label>
+<textarea id="contact-message" name="message" rows="7" required></textarea>
+<button class="btn-primary contact-submit" type="submit">Envoyer</button>
+</form>
 </div>
 </div>
 </section></div>
-
 <footer id="site-footer" class="site-footer model-footer">
   <div class="model-footer-card">
     <div class="model-footer-left">
@@ -552,10 +563,10 @@ J’ai ensuite poursuivi en France avec un <strong>Master en finance et contrôl
         <span class="model-footer-map" aria-hidden="true"></span>
       </a>
       <nav class="model-footer-nav" aria-label="Navigation de pied de page">
-        <a data-view-target="about" href="#a-propos">À propos</a>
-        <a data-view-target="experience" href="#experience">Parcours</a>
-        <a data-view-target="formation" href="#formation">Formation</a>
+        <a data-view-target="about" href="#a-propos">Présentation</a>
         <a data-view-target="projects" href="#portfolio">Portfolio</a>
+        <a data-view-target="experience" href="#experience">Parcours</a>
+        <a data-view-target="contact" href="#contact">Contact</a>
       </nav>
     </div>
 
@@ -582,8 +593,20 @@ J’ai ensuite poursuivi en France avec un <strong>Master en finance et contrôl
 <img alt="Ressource intégrée supplémentaire 0" src="assets/images/original/img-46-workflow-etl-finance-analytics.png" style="display:none"/><img alt="Ressource intégrée supplémentaire 1" src="assets/images/original/img-47-automatisation-vba-finance-analytics.png" style="display:none"/>
 
 
-  <script src="assets/js/main.js?v=v22-powerbi-page2-buttons"></script>
+  <script src="assets/js/main.js?v=v24-nav-contact-responsive"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
