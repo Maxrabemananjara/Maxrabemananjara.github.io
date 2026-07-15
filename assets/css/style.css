@@ -7977,12 +7977,9 @@ body[data-theme="dark"] .portfolio-web-context-summary > div {
   .about-profile-section .hero-copy {
     height: 586px;
     margin-top: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 0;
-    font-size: 17px;
-    line-height: 1.6;
+    display: block;
+    font-size: clamp(17px, 1.3vw, 20px);
+    line-height: 1.72;
   }
 
   .about-profile-section .hero-copy p {
