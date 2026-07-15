@@ -7966,3 +7966,80 @@ body[data-theme="dark"] .portfolio-web-context-summary > div {
     height: 42px;
   }
 }
+
+/* Final visual adjustments */
+@media (min-width: 1101px) {
+  .about-profile-section .hero-inner {
+    align-items: start;
+    align-content: center;
+  }
+
+  .about-profile-section .hero-copy {
+    height: 586px;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0;
+    font-size: 17px;
+    line-height: 1.6;
+  }
+
+  .about-profile-section .hero-copy p {
+    margin: 0;
+  }
+}
+
+#projet-portfolio-web-detail .portfolio-web-links-section .project-detail-actions > .project-button:first-child {
+  width: 171px !important;
+  min-width: 171px !important;
+  height: 48px !important;
+  min-height: 48px !important;
+  padding: 0 18px !important;
+  color: #ffffff !important;
+}
+
+#projet-portfolio-web-detail .portfolio-web-links-section .project-detail-actions > .project-button:first-child .project-action-icon img {
+  filter: brightness(0) invert(1) !important;
+}
+
+#projet-portfolio-web-detail .portfolio-web-article-section > h2 {
+  color: var(--cyan) !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 18px !important;
+  font-weight: 900 !important;
+  letter-spacing: 0 !important;
+  line-height: 1.25 !important;
+  text-transform: uppercase !important;
+}
+
+#projet-trains-supprimes-detail .trains-article-header h1,
+#projet-analyse-mobilite-rhone-detail .mobilite-article-header h1,
+#projet-portfolio-web-detail .portfolio-web-article-header h1 {
+  font-size: clamp(2.95rem, 4.8vw, 5rem) !important;
+}
+
+.view-page[data-page="contact"] .contact-shell.contact-shell-form-only {
+  padding-bottom: calc(clamp(28px, 5vw, 72px) + 58px) !important;
+}
+
+@media (max-width: 1100px) {
+  .about-profile-section .hero-copy {
+    height: auto;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .view-page[data-page="contact"] .contact-shell.contact-shell-form-only {
+    padding-bottom: calc(clamp(28px, 5vw, 72px) + 34px) !important;
+  }
+}
+
+@media (max-width: 760px) {
+  #projet-trains-supprimes-detail .trains-article-header h1,
+  #projet-analyse-mobilite-rhone-detail .mobilite-article-header h1,
+  #projet-portfolio-web-detail .portfolio-web-article-header h1 {
+    font-size: clamp(2.3rem, 10.5vw, 3.45rem) !important;
+  }
+}
