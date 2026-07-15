@@ -7841,3 +7841,128 @@ body[data-theme="dark"] .portfolio-web-context-summary > div {
     font-size: clamp(1.35rem, 7vw, 1.85rem) !important;
   }
 }
+
+/* Project page harmonization */
+#projet-trains-supprimes-detail .trains-article-header .section-kicker,
+#projet-analyse-mobilite-rhone-detail .mobilite-article-header .section-kicker,
+#projet-portfolio-web-detail .portfolio-web-article-header .section-kicker {
+  font-size: clamp(1.8rem, 2.8vw, 2.6rem) !important;
+  line-height: 1.08 !important;
+  letter-spacing: .16em !important;
+  font-weight: 900 !important;
+}
+
+#projet-trains-supprimes-detail .trains-article-header h1,
+#projet-analyse-mobilite-rhone-detail .mobilite-article-header h1,
+#projet-portfolio-web-detail .portfolio-web-article-header h1 {
+  font-size: clamp(2.75rem, 4.5vw, 4.75rem) !important;
+  line-height: .98 !important;
+  letter-spacing: -.01em !important;
+}
+
+.github-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  flex: 0 0 auto;
+  color: var(--cyan);
+  background-color: currentColor;
+  -webkit-mask: url("../images/original/img-18-github.svg") center / contain no-repeat;
+  mask: url("../images/original/img-18-github.svg") center / contain no-repeat;
+  filter: none !important;
+}
+
+.github-icon--site,
+.github-icon--cyan {
+  color: var(--cyan);
+}
+
+.github-icon--trains {
+  color: var(--train-accent, #d60057);
+}
+
+.github-icon--button {
+  color: currentColor;
+}
+
+.stack-icon-ring .github-icon {
+  width: 48px;
+  height: 48px;
+}
+
+.project-action-icon .github-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.btn-github .github-icon {
+  width: 26px;
+  height: 26px;
+}
+
+.model-footer-social .github-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.project-github-link .github-icon {
+  width: 23px;
+  height: 23px;
+}
+
+#projet-portfolio-web-detail .portfolio-web-links-section .project-detail-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+#projet-portfolio-web-detail .portfolio-web-links-section .project-github-link {
+  width: 54px !important;
+  min-width: 54px !important;
+  height: 48px !important;
+  min-height: 48px !important;
+  padding: 0 !important;
+  gap: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: transparent !important;
+  border: 1px solid rgba(34, 199, 201, .42) !important;
+  color: var(--cyan) !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+#projet-portfolio-web-detail .portfolio-web-links-section .project-github-link::after {
+  content: none !important;
+  display: none !important;
+}
+
+#projet-portfolio-web-detail .portfolio-web-links-section .project-github-link:hover {
+  transform: translateY(-2px) !important;
+  background: transparent !important;
+  color: var(--cyan) !important;
+  box-shadow: none !important;
+}
+
+@media (max-width: 760px) {
+  #projet-trains-supprimes-detail .trains-article-header .section-kicker,
+  #projet-analyse-mobilite-rhone-detail .mobilite-article-header .section-kicker,
+  #projet-portfolio-web-detail .portfolio-web-article-header .section-kicker {
+    font-size: clamp(1.2rem, 5.5vw, 1.65rem) !important;
+    letter-spacing: .1em !important;
+  }
+
+  #projet-trains-supprimes-detail .trains-article-header h1,
+  #projet-analyse-mobilite-rhone-detail .mobilite-article-header h1,
+  #projet-portfolio-web-detail .portfolio-web-article-header h1 {
+    font-size: clamp(2.15rem, 10vw, 3.25rem) !important;
+    line-height: 1 !important;
+  }
+
+  .stack-icon-ring .github-icon {
+    width: 42px;
+    height: 42px;
+  }
+}
