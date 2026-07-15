@@ -8010,11 +8010,23 @@ body[data-theme="dark"] .portfolio-web-context-summary > div {
   text-transform: uppercase !important;
 }
 
+#projet-trains-supprimes-detail .trains-article-lead,
+#projet-trains-supprimes-detail .trains-article-section > p,
+#projet-analyse-mobilite-rhone-detail .mobilite-article-lead,
+#projet-analyse-mobilite-rhone-detail .mobilite-article-section > p:not(.mobilite-powerbi-caption),
+#projet-analyse-mobilite-rhone-detail .mobilite-step-grid p,
 #projet-portfolio-web-detail .portfolio-web-article-lead,
 #projet-portfolio-web-detail .portfolio-web-article-section > p,
-.portfolio-web-project-card .card-text {
-  text-align: justify;
+.about-intro-text,
+.about-profile-section .hero-copy p,
+.section-desc,
+.card-text,
+.accomplishment-copy,
+.timeline-project,
+.timeline-highlight {
+  text-align: justify !important;
   text-align-last: left;
+  text-justify: inter-word;
 }
 
 #projet-trains-supprimes-detail .trains-article-header h1,
@@ -8041,10 +8053,22 @@ body[data-theme="dark"] .portfolio-web-context-summary > div {
 }
 
 @media (max-width: 760px) {
+  #projet-trains-supprimes-detail .trains-article-lead,
+  #projet-trains-supprimes-detail .trains-article-section > p,
+  #projet-analyse-mobilite-rhone-detail .mobilite-article-lead,
+  #projet-analyse-mobilite-rhone-detail .mobilite-article-section > p:not(.mobilite-powerbi-caption),
+  #projet-analyse-mobilite-rhone-detail .mobilite-step-grid p,
   #projet-portfolio-web-detail .portfolio-web-article-lead,
   #projet-portfolio-web-detail .portfolio-web-article-section > p,
-  .portfolio-web-project-card .card-text {
-    text-align: left;
+  .about-intro-text,
+  .about-profile-section .hero-copy p,
+  .section-desc,
+  .card-text,
+  .accomplishment-copy,
+  .timeline-project,
+  .timeline-highlight {
+    text-align: left !important;
+    text-align-last: auto;
   }
 
   #projet-trains-supprimes-detail .trains-article-header h1,
