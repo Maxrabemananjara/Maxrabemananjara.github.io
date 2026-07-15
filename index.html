@@ -5,7 +5,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Mandrindra Rabemananjara</title>
-<link rel="stylesheet" href="assets/css/style.css?v=v56-project-harmonization">
+<link rel="stylesheet" href="assets/css/style.css?v=v57-language-switch">
 </head>
 <body data-theme="light">
 <div aria-hidden="true" class="bg-video-root"><video autoplay="" class="bg-video" loop="" muted="" playsinline=""><source src="assets/videos/original/video-01-background.mp4" type="video/mp4"/></video></div>
@@ -27,6 +27,11 @@
 <a data-view="experience" href="#">Parcours</a>
 <a data-view="contact" href="#">Contact</a>
 <button class="theme-btn" type="button">LIGHT</button>
+<div class="language-switch" role="group" aria-label="Choisir la langue">
+<button class="language-btn is-active" type="button" data-language="fr" aria-pressed="true">FR</button>
+<span class="language-switch-separator" aria-hidden="true">|</span>
+<button class="language-btn" type="button" data-language="en" aria-pressed="false">EN</button>
+</div>
 </nav>
 <button class="mobile-menu-toggle" type="button" aria-label="Ouvrir le menu" aria-controls="site-nav" aria-expanded="false"><span></span><span></span><span></span></button>
 </div>
@@ -358,7 +363,7 @@
 </div>
 </article>
 <article class="card project-card">
-<div class="card-media"><img alt="Analyse Mobilité Rhône" src="assets/images/original/img-mobilite-rhone-01.png"/></div>
+<div class="card-media"><img alt="Analyse Mobilité Rhône" data-lang-src-fr="assets/images/original/img-mobilite-rhone-01.png" data-lang-src-en="assets/images/original/img-mobilite-rhone-01-en.png" src="assets/images/original/img-mobilite-rhone-01.png"/></div>
 <div class="card-body">
 <div class="card-title">Analyse Mobilité Rhône</div>
 <div class="card-subtitle">Data Analysis · Power BI · Dataviz · Python · Open Data</div>
@@ -371,7 +376,7 @@
 </div>
 </article>
 <article class="card project-card">
-<div class="card-media"><img alt="Développement web : site portfolio multi-vues" src="assets/images/original/img-portfolio-web-01.png"/></div>
+<div class="card-media"><img alt="Développement web : site portfolio multi-vues" data-lang-src-fr="assets/images/original/img-portfolio-web-01.png" data-lang-src-en="assets/images/original/img-portfolio-web-01-en.png" src="assets/images/original/img-portfolio-web-01.png"/></div>
 <div class="card-body">
 <div class="card-title">Développement web : site portfolio multi-vues</div>
 <div class="card-subtitle">Front-end · GitHub Pages · JavaScript natif · Responsive</div>
@@ -409,7 +414,7 @@
 <p>Microsoft Fabric joue le rôle de socle technique pour organiser les zones Lakehouse, tandis que GitHub Actions et GitHub Pages assurent la mise à jour et la publication du dashboard public.</p>
 </section>
 <figure class="trains-article-figure">
-<img alt="Workflow du projet : de la source open data à la restitution publique" class="project-zoom-trigger project1-zoom-target" data-caption="Workflow du projet" data-project1-zoom="true" data-zoom-caption="Workflow du projet" src="assets/images/original/img-trains-supprimes-02.png"/>
+<img alt="Workflow du projet : de la source open data à la restitution publique" class="project-zoom-trigger project1-zoom-target" data-caption="Workflow du projet" data-project1-zoom="true" data-zoom-caption="Workflow du projet" data-lang-src-fr="assets/images/original/img-trains-supprimes-02.png" data-lang-src-en="assets/images/original/img-trains-supprimes-02-en.png" src="assets/images/original/img-trains-supprimes-02.png"/>
 <figcaption>Workflow du projet : de la source open data à la restitution publique.</figcaption>
 </figure>
 <section class="trains-article-section">
@@ -466,7 +471,7 @@
 <section class="trains-article-section trains-links-section">
 <h2>LIENS EXTERNES</h2>
 <div class="project-detail-actions">
-<a class="project-button" href="https://maxrabemananjara.github.io/train-supprimes-fabric/" rel="noopener" target="_blank">Voir le dashboard</a>
+<a class="project-button" href="https://maxrabemananjara.github.io/train-supprimes-fabric/" rel="noopener" target="_blank">View dashboard</a>
 <a class="project-button project-button-secondary project-github-link" href="https://github.com/Maxrabemananjara/train-supprimes-fabric" rel="noopener" target="_blank" aria-label="Voir le GitHub" title="Voir le GitHub"><span class="github-icon github-icon--trains" aria-hidden="true"></span></a>
 </div>
 </section>
@@ -482,7 +487,7 @@
 <p class="mobilite-article-lead">La lecture finale permet d’aborder le territoire sous trois angles : volume global, temporalités de déplacement et concentration géographique. Le détail technique reste volontairement consultable dans le dépôt GitHub afin de rendre le projet auditable.</p>
 </header>
 <figure class="mobilite-article-figure mobilite-article-cover">
-<img alt="Analyse Mobilité Rhône" class="project-zoom-trigger project1-zoom-target" data-caption="Analyse Mobilité Rhône" data-project1-zoom="true" data-zoom-caption="Analyse Mobilité Rhône" src="assets/images/original/img-mobilite-rhone-01.png"/>
+<img alt="Analyse Mobilité Rhône" class="project-zoom-trigger project1-zoom-target" data-caption="Analyse Mobilité Rhône" data-project1-zoom="true" data-zoom-caption="Analyse Mobilité Rhône" data-lang-src-fr="assets/images/original/img-mobilite-rhone-01.png" data-lang-src-en="assets/images/original/img-mobilite-rhone-01-en.png" src="assets/images/original/img-mobilite-rhone-01.png"/>
 </figure>
 <section class="mobilite-article-section">
 <h2>DÉMARCHE PROJET</h2>
@@ -497,7 +502,7 @@
 <h2>CHAÎNE DE TRAITEMENT</h2>
 <p>Le workflow présente la logique générale du projet : partir de données publiques dispersées, les contrôler et les transformer avec Python, puis les mettre en forme dans un modèle Power BI adapté à l’analyse territoriale.</p>
 <figure class="mobilite-article-figure">
-<img alt="Workflow synthétique : sources ouvertes, profiling Python, préparation des données, modèle analytique et dashboard Power BI." class="project-zoom-trigger project1-zoom-target" data-caption="Workflow synthétique : sources ouvertes, profiling Python, préparation des données, modèle analytique et dashboard Power BI." data-project1-zoom="true" data-zoom-caption="Workflow synthétique : sources ouvertes, profiling Python, préparation des données, modèle analytique et dashboard Power BI." src="assets/images/original/img-mobilite-rhone-02.png"/>
+<img alt="Workflow synthétique : sources ouvertes, profiling Python, préparation des données, modèle analytique et dashboard Power BI." class="project-zoom-trigger project1-zoom-target" data-caption="Workflow synthétique : sources ouvertes, profiling Python, préparation des données, modèle analytique et dashboard Power BI." data-project1-zoom="true" data-zoom-caption="Workflow synthétique : sources ouvertes, profiling Python, préparation des données, modèle analytique et dashboard Power BI." data-lang-src-fr="assets/images/original/img-mobilite-rhone-02.png" data-lang-src-en="assets/images/original/img-mobilite-rhone-02-en.png" src="assets/images/original/img-mobilite-rhone-02.png"/>
 <figcaption>Workflow synthétique : sources ouvertes, profiling Python, préparation des données, modèle analytique et dashboard Power BI.</figcaption>
 </figure>
 </section>
@@ -547,7 +552,7 @@
 <p class="portfolio-web-article-meta">Projet : <strong>Front-end / GitHub Pages / Portfolio</strong></p>
 </header>
 <figure class="portfolio-web-article-figure portfolio-web-article-cover">
-<img alt="Développement web : site portfolio multi-vues" class="project-zoom-trigger project1-zoom-target" data-caption="Développement web : site portfolio multi-vues" data-project1-zoom="true" data-zoom-caption="Développement web : site portfolio multi-vues" src="assets/images/original/img-portfolio-web-01.png"/>
+<img alt="Développement web : site portfolio multi-vues" class="project-zoom-trigger project1-zoom-target" data-caption="Développement web : site portfolio multi-vues" data-project1-zoom="true" data-zoom-caption="Développement web : site portfolio multi-vues" data-lang-src-fr="assets/images/original/img-portfolio-web-01.png" data-lang-src-en="assets/images/original/img-portfolio-web-01-en.png" src="assets/images/original/img-portfolio-web-01.png"/>
 </figure>
 <section class="portfolio-web-article-section portfolio-web-context-section">
 <h2>CONTEXTE</h2>
@@ -560,7 +565,7 @@
 </div>
 </section>
 <figure class="portfolio-web-article-figure">
-<img alt="Stack et logique technique du portfolio" class="project-zoom-trigger project1-zoom-target" data-caption="Stack et logique technique du portfolio" data-project1-zoom="true" data-zoom-caption="Stack et logique technique du portfolio" src="assets/images/original/img-portfolio-web-02.png"/>
+<img alt="Stack et logique technique du portfolio" class="project-zoom-trigger project1-zoom-target" data-caption="Stack et logique technique du portfolio" data-project1-zoom="true" data-zoom-caption="Stack et logique technique du portfolio" data-lang-src-fr="assets/images/original/img-portfolio-web-02.png" data-lang-src-en="assets/images/original/img-portfolio-web-02-en.png" src="assets/images/original/img-portfolio-web-02.png"/>
 <figcaption>Architecture éditoriale et technique du portfolio : vues internes, projets détaillés et publication web.</figcaption>
 </figure>
 <section class="portfolio-web-article-section">
@@ -663,6 +668,6 @@
 <img alt="Ressource intégrée supplémentaire 0" src="assets/images/original/img-46-workflow-etl-finance-analytics.png" style="display:none"/><img alt="Ressource intégrée supplémentaire 1" src="assets/images/original/img-47-automatisation-vba-finance-analytics.png" style="display:none"/>
 
 
-  <script src="assets/js/main.js?v=v24-nav-contact-responsive"></script>
+  <script src="assets/js/main.js?v=v25-language-switch"></script>
 </body>
 </html>
