@@ -8010,6 +8010,13 @@ body[data-theme="dark"] .portfolio-web-context-summary > div {
   text-transform: uppercase !important;
 }
 
+#projet-portfolio-web-detail .portfolio-web-article-lead,
+#projet-portfolio-web-detail .portfolio-web-article-section > p,
+.portfolio-web-project-card .card-text {
+  text-align: justify;
+  text-align-last: left;
+}
+
 #projet-trains-supprimes-detail .trains-article-header h1,
 #projet-analyse-mobilite-rhone-detail .mobilite-article-header h1,
 #projet-portfolio-web-detail .portfolio-web-article-header h1 {
@@ -8034,6 +8041,12 @@ body[data-theme="dark"] .portfolio-web-context-summary > div {
 }
 
 @media (max-width: 760px) {
+  #projet-portfolio-web-detail .portfolio-web-article-lead,
+  #projet-portfolio-web-detail .portfolio-web-article-section > p,
+  .portfolio-web-project-card .card-text {
+    text-align: left;
+  }
+
   #projet-trains-supprimes-detail .trains-article-header h1,
   #projet-analyse-mobilite-rhone-detail .mobilite-article-header h1,
   #projet-portfolio-web-detail .portfolio-web-article-header h1 {
