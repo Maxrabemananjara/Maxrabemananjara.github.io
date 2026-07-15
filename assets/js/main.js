@@ -110,40 +110,76 @@
   var image=document.getElementById('project1-zoom-image');
   var caption=document.getElementById('project1-zoom-caption');
   var closeBtn=document.getElementById('project1-zoom-close');
+  if(!overlay || !panel || !image || !caption || !closeBtn) return;
   var savedScroll=0;
-  function openZoom(src, alt, cap){
+  var activeTrigger=null;
+  var triggers=Array.prototype.slice.call(document.querySelectorAll('.project-cards .project-card > .card-media > img, .project-detail img.project-zoom-trigger'));
+  function triggerLabel(node){
+    var alt=node.getAttribute('alt') || '';
+    return document.documentElement.lang === 'en' ? 'Enlarge image: '+alt : 'Agrandir l’image : '+alt;
+  }
+  function updateTriggerLabels(){
+    triggers.forEach(function(node){ node.setAttribute('aria-label',triggerLabel(node)); });
+  }
+  function imageCaption(node){
+    var figure=node.closest ? node.closest('figure') : null;
+    var figureCaption=figure ? figure.querySelector('figcaption') : null;
+    return node.getAttribute('data-zoom-caption') || node.getAttribute('data-caption') || (figureCaption ? figureCaption.textContent.trim() : '') || node.getAttribute('alt') || '';
+  }
+  function openZoom(node){
+    if(!node) return;
     savedScroll=window.pageYOffset || document.documentElement.scrollTop || 0;
-    image.src=src;
-    image.alt=alt || '';
-    caption.textContent=cap || '';
+    activeTrigger=node;
+    image.src=node.currentSrc || node.getAttribute('src') || '';
+    image.alt=node.getAttribute('alt') || '';
+    caption.textContent=imageCaption(node);
+    caption.hidden=!caption.textContent;
+    panel.scrollTop=0;
     overlay.classList.add('is-open');
     overlay.setAttribute('aria-hidden','false');
     document.body.classList.add('project1-zoom-lock');
+    requestAnimationFrame(function(){ closeBtn.focus(); });
   }
   function closeZoom(){
+    if(!overlay.classList.contains('is-open')) return;
     overlay.classList.remove('is-open');
     overlay.setAttribute('aria-hidden','true');
     document.body.classList.remove('project1-zoom-lock');
     image.removeAttribute('src');
     window.scrollTo(0, savedScroll);
+    if(activeTrigger){
+      try { activeTrigger.focus({preventScroll:true}); } catch(e) { activeTrigger.focus(); }
+    }
+    activeTrigger=null;
   }
   window.project1OpenZoom=openZoom;
   window.project1CloseZoom=closeZoom;
-  var triggers=document.querySelectorAll('.project-shot img.project1-zoom-target, .project-card > img, .project-card .project-card-image img, .project-card .project-image img');
   triggers.forEach(function(node){
+    node.classList.add('project-zoom-enabled');
+    node.setAttribute('role','button');
+    node.setAttribute('tabindex','0');
+    node.setAttribute('aria-haspopup','dialog');
     node.addEventListener('click', function(ev){
       ev.preventDefault();
       ev.stopPropagation();
-      var fig=node.closest('.project-shot');
-      var img=fig ? fig.querySelector('img.project1-zoom-target') : node;
-      if(!img) return;
-      openZoom(img.getAttribute('src'), img.getAttribute('alt'), node.getAttribute('data-zoom-caption') || img.getAttribute('data-zoom-caption') || '');
+      openZoom(node);
+    });
+    node.addEventListener('keydown', function(ev){
+      if(ev.key !== 'Enter' && ev.key !== ' ') return;
+      ev.preventDefault();
+      openZoom(node);
     });
   });
+  updateTriggerLabels();
   closeBtn.addEventListener('click', function(ev){ ev.preventDefault(); ev.stopPropagation(); closeZoom(); });
   overlay.addEventListener('click', function(ev){ if(ev.target===overlay){ closeZoom(); } });
   panel.addEventListener('click', function(ev){ ev.stopPropagation(); });
-  document.addEventListener('keydown', function(ev){ if(ev.key==='Escape' && overlay.classList.contains('is-open')){ closeZoom(); } });
+  document.addEventListener('keydown', function(ev){
+    if(!overlay.classList.contains('is-open')) return;
+    if(ev.key==='Escape'){ closeZoom(); }
+    else if(ev.key==='Tab'){ ev.preventDefault(); closeBtn.focus(); }
+  });
+  document.addEventListener('portfolio:languagechange',updateTriggerLabels);
 })();
 
 (function(){
