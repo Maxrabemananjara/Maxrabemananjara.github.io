@@ -8039,7 +8039,7 @@ body[data-theme="dark"] .portfolio-web-context-summary > div {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-size: clamp(16px, 1.2vw, 18px);
+    font-size: clamp(17px, 1.3vw, 20px);
     line-height: 1.72;
   }
 
