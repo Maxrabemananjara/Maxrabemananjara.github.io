@@ -526,6 +526,23 @@
 
 
 (function(){
+  const form = document.querySelector('[data-contact-form]');
+  if(!form) return;
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = (document.getElementById('contact-name') || {}).value || '';
+    const email = (document.getElementById('contact-email') || {}).value || '';
+    const message = (document.getElementById('contact-message') || {}).value || '';
+    const english = document.documentElement.lang === 'en';
+    const subject = encodeURIComponent((english ? 'Message from the portfolio - ' : 'Message depuis le portfolio - ') + (name.trim() || 'Contact'));
+    const body = encodeURIComponent(english
+      ? 'Name: ' + name.trim() + '\nEmail: ' + email.trim() + '\n\nMessage:\n' + message.trim()
+      : 'Nom : ' + name.trim() + '\nEmail : ' + email.trim() + '\n\nMessage :\n' + message.trim());
+    window.location.href = 'mailto:mandrindra23@yahoo.fr?subject=' + subject + '&body=' + body;
+  });
+})();
+
+(function(){
   const languageKey = 'portfolio-language';
   const languageButtons = Array.from(document.querySelectorAll('.language-btn'));
   const htmlEntries = [];
@@ -756,12 +773,11 @@
   addHTML('.portfolio-web-links-section .project-button:not(.project-button-secondary) > span:last-child', ['Website']);
 
   addHTML('.contact-form-heading', ['Contact me']);
-  addHTML('.contact-availability p', ['Professional email address and phone number are being updated.']);
   addHTML('.contact-form label', ['Name', 'Email', 'Your message']);
-  addHTML('.contact-submit', ['Contact details being updated']);
+  addHTML('.contact-submit', ['Send']);
   addHTML('.model-footer-copy', ['© 2026 Mandrindra Rabemananjara. All rights reserved.']);
   addHTML('.model-footer-nav a', ['About', 'Portfolio', 'Experience', 'Contact']);
-  addHTML('.model-footer-title', ['Location']);
+  addHTML('.model-footer-title', ['Contact details']);
 
   addAttribute('.language-switch', 'aria-label', ['Choose language']);
   addAttribute('.header-signature', 'aria-label', ['Mandrindra Rabemananjara emblem']);
@@ -820,7 +836,7 @@
   addAttribute('.portfolio-web-tech-grid', 'aria-label', ['Project technical stack']);
   addAttribute('.portfolio-web-links-section .project-github-link', 'aria-label', ['View GitHub']);
   addAttribute('.portfolio-web-links-section .project-github-link', 'title', ['View GitHub']);
-  addAttribute('.contact-form', 'aria-label', ['Contact form temporarily unavailable']);
+  addAttribute('.contact-form', 'aria-label', ['Contact form']);
   addAttribute('.model-footer-mr', 'aria-label', ['Back to home']);
   addAttribute('.model-footer-emblem', 'aria-label', ['Back to home']);
   addAttribute('.model-footer-nav', 'aria-label', ['Footer navigation']);
