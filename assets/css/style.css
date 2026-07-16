@@ -8105,6 +8105,18 @@ body[data-theme="dark"] .portfolio-web-context-summary > div {
   }
 }
 
+.about-profile-section .hero-copy {
+  gap: 0;
+}
+
+.about-profile-section .hero-copy p {
+  margin: 0 0 .55em;
+}
+
+.about-profile-section .hero-copy p:last-child {
+  margin-bottom: 0;
+}
+
 @media (max-width: 900px) {
   .view-page[data-page="contact"] .contact-shell.contact-shell-form-only {
     padding-bottom: calc(clamp(28px, 5vw, 72px) + 34px) !important;
