@@ -8150,3 +8150,42 @@ body[data-theme="dark"] .portfolio-web-context-summary > div {
     font-size: clamp(2.3rem, 10.5vw, 3.45rem) !important;
   }
 }
+
+@media (min-width: 901px) {
+  .view-page[data-page="contact"] .contact-shell.contact-shell-form-only {
+    padding: 40px !important;
+    gap: 0 !important;
+  }
+
+  .view-page[data-page="contact"] .contact-form-heading {
+    width: calc(100% - 120px) !important;
+    max-width: none !important;
+    margin: 0 60px 6px !important;
+    font-size: 30px !important;
+    line-height: 1.15 !important;
+  }
+
+  .view-page[data-page="contact"] .contact-shell.contact-shell-form-only .contact-form {
+    width: 100% !important;
+    max-width: none !important;
+    padding: 28px !important;
+    gap: 10px !important;
+  }
+
+  .view-page[data-page="contact"] .contact-form input {
+    height: 48px !important;
+    min-height: 48px !important;
+    padding: 12px 14px !important;
+  }
+
+  .view-page[data-page="contact"] .contact-form textarea {
+    height: 164px !important;
+    min-height: 164px !important;
+    padding: 12px 14px !important;
+  }
+
+  .view-page[data-page="contact"] .contact-submit {
+    height: 48px !important;
+    min-height: 48px !important;
+  }
+}

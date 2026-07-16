@@ -777,7 +777,7 @@
   addHTML('.contact-submit', ['Send']);
   addHTML('.model-footer-copy', ['© 2026 Mandrindra Rabemananjara. All rights reserved.']);
   addHTML('.model-footer-nav a', ['About', 'Portfolio', 'Experience', 'Contact']);
-  addHTML('.model-footer-title', ['Contact details']);
+  addHTML('.model-footer-title', ['Contact']);
 
   addAttribute('.language-switch', 'aria-label', ['Choose language']);
   addAttribute('.header-signature', 'aria-label', ['Mandrindra Rabemananjara emblem']);
