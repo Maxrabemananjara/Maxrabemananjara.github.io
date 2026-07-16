@@ -8036,8 +8036,10 @@ body[data-theme="dark"] .portfolio-web-context-summary > div {
   .about-profile-section .hero-copy {
     height: 586px;
     margin-top: 0;
-    display: block;
-    font-size: clamp(17px, 1.3vw, 20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: clamp(16px, 1.2vw, 18px);
     line-height: 1.72;
   }
 
@@ -8110,7 +8112,7 @@ body[data-theme="dark"] .portfolio-web-context-summary > div {
 }
 
 .about-profile-section .hero-copy p {
-  margin: 0 0 .55em;
+  margin: 0 0 .7em;
 }
 
 .about-profile-section .hero-copy p:last-child {
