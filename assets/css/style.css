@@ -8189,3 +8189,25 @@ body[data-theme="dark"] .portfolio-web-context-summary > div {
     min-height: 48px !important;
   }
 }
+
+@media (min-width: 901px) {
+  .view-page[data-page="contact"] .contact-shell.contact-shell-form-only {
+    min-height: 690px !important;
+    grid-template-rows: auto minmax(0, 1fr) !important;
+    row-gap: 0 !important;
+  }
+
+  .view-page[data-page="contact"] .contact-form-heading {
+    margin: 0 auto 24px !important;
+  }
+
+  .view-page[data-page="contact"] .contact-form {
+    height: 100% !important;
+    min-height: 0 !important;
+    grid-template-rows: auto 48px auto 48px auto minmax(220px, 1fr) 48px !important;
+  }
+
+  .view-page[data-page="contact"] .contact-form textarea {
+    min-height: 220px !important;
+  }
+}
